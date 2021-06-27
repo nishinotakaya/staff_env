@@ -1,0 +1,27 @@
+<div class="staff_center show_place">
+  <p id="notice"><%= notice %></p>
+
+  <div class= "show_staff">
+    <p>
+      <strong>名前</strong>
+      <br><%= @staff.name %>
+    </p>
+  </div> 
+
+  <div class= "show_staff">
+    <p>
+      <strong>メールアドレス</strong>
+      <br><%= @staff.email %>
+    </p>
+  </div>
+
+  <div class= "show_staff">
+    <p>
+      <strong>電話番号</strong>
+      <br><%= @staff.cellphone %>
+    </p>
+  </div>
+
+  <%= link_to '編集', edit_staff_path(@staff),  class: "btn btn-success" %> |
+  <%= link_to '戻る', staffs_path ,  class: "btn btn-primary"%>
+</div>

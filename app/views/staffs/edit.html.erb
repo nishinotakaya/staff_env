@@ -1,0 +1,8 @@
+<div class="staff_center show_place">
+  <h1>従業員編集</h1>
+
+  <%= render 'form', staff: @staff %>
+
+  <%= link_to '詳細', @staff , class: "btn btn-primary" %>
+  <%= link_to '戻る', staffs_path , class: "btn btn-primary"%>
+</div>
