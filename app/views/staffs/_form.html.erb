@@ -1,32 +1,32 @@
-<%= form_with(model: staff, local: true) do |form| %>
+<%= form_with(model: staff) do |form| %>
   <% if staff.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(staff.errors.count, "error") %> prohibited this staff from being saved:</h2>
 
       <ul>
-      <% staff.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% staff.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :staff_name %>
+    <%= form.label :名前 %>
+   <br><%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :staff_email %>
+    <%= form.label :メールアドレス %>
+    <br><%= form.text_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :cellphone %>
-    <%= form.number_field :cellphone, id: :staff_cellphone %>
+    <%= form.label :電話番号 %>
+    <br><%= form.text_field :cellphone %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <br><%= form.submit "追加", class: "btn btn-success"  %>
   </div>
 <% end %>
