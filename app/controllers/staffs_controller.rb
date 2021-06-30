@@ -23,6 +23,7 @@ before_action :set_staff, only: [:show, :update, :destroy, :edit]
  def create
     #formのデータを受け取る
    @staff = Staff.new(staff_params)
+   debugger
    if @staff.save
      #saveが完了したら、一覧ページへリダイレクト
      flash[:success] = '新規作成に成功しました。'
