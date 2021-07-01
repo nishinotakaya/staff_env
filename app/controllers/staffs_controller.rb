@@ -75,3 +75,4 @@ before_action :set_staff, only: [:show, :update, :destroy, :edit]
     @staff = Staff.find(params[:id])
   end
 end
+
