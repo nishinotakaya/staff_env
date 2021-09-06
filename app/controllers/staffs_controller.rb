@@ -65,7 +65,7 @@ before_action :set_staff, only: [:show, :update, :destroy, :edit]
    #strong parameters リクエストパラメターの検証（これがないとうまくいかないので注意）
 
   def staff_params
-    params.require(:staff).permit(:nam, :email, :cellphone)
+    params.require(:staff).permit(:name, :email, :cellphon)
   end
 
   #共通処理なので、before_actionで呼び出している
