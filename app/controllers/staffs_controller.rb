@@ -24,7 +24,6 @@ before_action :set_staff, only: [:show, :update, :destroy, :edit]
     #formのデータを受け取る
    @staff = Staff.new(staff_params)
    if @staff.save
-     #saveが完了したら、一覧ページへリダイレクト
      flash[:success] = '新規作成に成功しました。'
      redirect_to staffs_url
    else
@@ -65,7 +64,7 @@ before_action :set_staff, only: [:show, :update, :destroy, :edit]
    #strong parameters リクエストパラメターの検証（これがないとうまくいかないので注意）
 
   def staff_params
-    params.require(:staff).permit(:name, :email, :cellphon)
+    params.require(:staff).permit(:nam, :email, :cellphon)
   end
 
   #共通処理なので、before_actionで呼び出している
