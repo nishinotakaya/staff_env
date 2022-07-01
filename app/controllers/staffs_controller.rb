@@ -24,7 +24,6 @@ before_action :set_staff, only: [:show, :update, :destroy, :edit]
     #formのデータを受け取る
    @staff = Staff.new(staff_params)
    if @staff.save
-     #saveが完了したら、一覧ページへリダイレクト
      flash[:success] = '新規作成に成功しました。'
      redirect_to staffs_url
    else
